@@ -140,7 +140,6 @@ h1{
    background: #EAEAEA;
    height: 40px;
    line-height: 40px;
-   padding: 0 10px;
    border: 1px solid gray;
    margin: 0 5px;
  }
@@ -150,6 +149,10 @@ h1{
  }
  .paginador a{
    text-decoration: none;
+   display: block;
+   height: inherit;
+   padding: 0 10px;
+   
  }
 
 .autor{
