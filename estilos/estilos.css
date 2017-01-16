@@ -1,0 +1,171 @@
+body{
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #515151;
+}
+a{
+  color: #515151;
+}
+header{
+  background: #273B47;  /*Color de la barra de menu*/
+  padding:0 15px;
+  height: 50px;
+  display: flex; /*distribuyo elementos delmenu*/
+  justify-content: space-between;
+  align-items: center;
+}
+.header-derecha{
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+.header-derecha .button{
+  margin-left: 10px;
+}
+nav{
+  height: inherit;/*heredo el alto de header*/
+}
+nav ul{
+  margin: 0;
+  display: flex;
+  height: inherit; /*heredo el alto de nav*/
+}
+nav li{
+  list-style: none; /*Elimino punto de la lista de menu*/
+  display: flex;/* separo elementos de menu*/
+  align-items: center;
+  color: white;
+  height: inherit; /*heredo el alto de nav ul*/
+}
+nav li:after{ /*agrego separador a elementos del menu*/
+  content: '|';
+  display: inline-block;/*para usar margenes*/
+}
+nav li:last-child::after{/*quito el ultimo "|" del menu*/
+display: none;
+}
+nav a{
+  color: white;
+  text-decoration: none;/*quito subrayado de los items del menu*/
+  height: inherit; /*heredo el alto de nav ul li*/
+  display: flex; /* centro los elementos en el header para poner elmargen al top del header*/
+  align-items: center;
+  /*agrego pading para hacer tener mas largo el margen superior de cada elemento*/
+  padding: 0 10px;
+}
+
+/*subclase para aplicar borde al top de cada elemento de menu al pasar mouse sobre el */
+nav a:hover{
+  /*aplico sombras: ubicacion de sombra, x, y, difuminado de color*/
+  box-shadow: inset 0 5px 0 #FF4842 !important;
+
+}
+nav a.esta-activa{
+  /*aplico sombras: ubicacion de sombra, x, y, difuminado de color*/
+  box-shadow: inset 0 5px 0 #7DCD40;
+
+}
+
+h1{
+  margin: 0;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.portada{
+  position: relative; /*doy posicion relativa a la portada*/
+  margin-bottom: 20px;
+}
+.portada .descripcion{
+  background: rgba(255, 255, 255, 0.7);/* dy color blanco con opacidad .5*/
+  position: absolute;
+  /* posiciono el elemento  dentro de la portada */
+  bottom: 30px;
+  left: 15px;
+  padding: 20px;
+}
+.button{
+  background: gray;
+  color: white;
+  /*border-bottom: 5px solid black;*/
+  box-shadow: inset 0 -5px 0 rgba(0,0,0,.2);
+  font-size: 14px;
+  padding: 5px 10px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: .1s;/*pongo delay de .2 segundos al presionar el boton*/
+}
+.button:active{
+  /*creo efecto de clickeo tipo boton al presionar el ancla*/
+  transform: scale(.9);
+}
+.button.rojo{
+  background: #FF4842;
+}
+
+/*tamano de la portada*/
+.contenedor{
+  width: 1000px;
+  margin: 0 auto;
+}
+/* distribucion de los articulos en la seccion*/
+.articulos{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+/*atributos para cada articulo*/
+.articulo-blog{
+  width: 300px;
+}
+.articulo-blog .descripcion{
+  margin-bottom: 20px;
+}
+.articulo-blog h3{
+  font-weight: 600;
+  margin: 10px 0 15px;
+}
+.paginador{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.paginador ul{
+  display: flex;
+  list-style: none;
+  margin-left: 15px;
+  padding: 0;
+}
+ .paginador li{
+   background: #EAEAEA;
+   height: 40px;
+   line-height: 40px;
+   padding: 0 10px;
+   border: 1px solid gray;
+   margin: 0 5px;
+ }
+ .paginador li.seleccionada{
+    border-color: transparent;
+    background: white;
+ }
+ .paginador a{
+   text-decoration: none;
+ }
+
+.autor{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  border-top: 1px solid gray;
+  padding-top: 15px;
+}
+
+.autor img{
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.autor p{
+  margin: 0;
+}
